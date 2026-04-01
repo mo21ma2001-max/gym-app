@@ -3,11 +3,11 @@
 A team project built with Node.js, Express, and EJS.
 
 ## Team
-- **Aya** — Project Manager
-- **Saja** — Backend Developer
-- **Roaa** — Frontend Developer
-- **Mohammad** — Database Designer
-- **Jubrail** — UI/UX Designer
+- **Aya** 
+- **Saja** 
+- **Roaa** 
+- **Mohammad**
+- **Jubrail** 
 
 ## Pages
 | Route | Description |
