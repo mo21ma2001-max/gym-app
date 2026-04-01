@@ -1,0 +1,30 @@
+<%- include('./partials/header') %>
+
+<!-- Hero -->
+<div class="text-center py-5">
+  <h1 class="display-4 fw-bold"><%= message %></h1>
+  <p class="lead" style="color:#ccc;">Join the best fitness experience and reach your goals</p>
+  <a href="/features" class="btn btn-danger btn-lg px-5 mt-3">
+    <i class="bi bi-arrow-right-circle me-2"></i>Explore Features
+  </a>
+</div>
+
+<!-- Feature Cards -->
+<div class="row text-center mt-3 g-4">
+  <% features.forEach(feature => { %>
+  <div class="col-md-4">
+    <div class="card p-4 h-100">
+      <div class="mb-3">
+        <div class="rounded-circle d-inline-flex align-items-center justify-content-center"
+             style="width:70px;height:70px;background:#dc3545;">
+          <i class="bi <%= feature.icon %> fs-3 text-white"></i>
+        </div>
+      </div>
+      <h4 class="fw-bold"><%= feature.title %></h4>
+      <p style="color:#aaa;"><%= feature.desc %></p>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
+<%- include('./partials/footer') %>

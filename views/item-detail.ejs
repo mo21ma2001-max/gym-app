@@ -1,0 +1,23 @@
+<%- include('./partials/header') %>
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card p-4 text-center">
+      <i class="bi bi-dumbbell text-danger" style="font-size:3rem;"></i>
+      <h2 class="fw-bold mt-3"><%= item.name %></h2>
+      <p style="color:#aaa;"><strong class="text-white">Type:</strong> <%= item.type %></p>
+      <p>
+        <% if(item.status === 'Available') { %>
+          <span class="badge bg-success px-3 py-2 fs-6">Available</span>
+        <% } else { %>
+          <span class="badge bg-danger px-3 py-2 fs-6">Busy</span>
+        <% } %>
+      </p>
+      <a href="/items" class="btn btn-outline-danger mt-2">
+        <i class="bi bi-arrow-left me-1"></i>Back to Equipment
+      </a>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer') %>

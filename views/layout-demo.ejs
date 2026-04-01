@@ -1,0 +1,46 @@
+<%- include('./partials/header') %>
+
+<div class="text-center mb-5">
+  <h1 class="fw-bold">Base Layout Demo <i class="bi bi-layout-text-sidebar-reverse text-danger"></i></h1>
+  <div class="section-divider"></div>
+  <p style="color:#ccc;">How EJS template partials work in this project</p>
+</div>
+
+<div class="row g-4 mb-5">
+  <div class="col-md-4">
+    <div class="card text-center p-4 h-100">
+      <i class="bi bi-layout-text-window-reverse text-danger" style="font-size:2.5rem;"></i>
+      <h4 class="mt-3 fw-bold">header.ejs</h4>
+      <p style="color:#aaa; font-size:0.9rem;">Contains &lt;head&gt;, Bootstrap CDN, navbar, and shared styles. Included at the top of every page.</p>
+      <code class="text-danger small">&lt;%- include('./partials/header') %&gt;</code>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-center p-4 h-100">
+      <i class="bi bi-file-earmark-code text-warning" style="font-size:2.5rem;"></i>
+      <h4 class="mt-3 fw-bold">page.ejs</h4>
+      <p style="color:#aaa; font-size:0.9rem;">Each page has only its unique content — no repeated HTML needed across files.</p>
+      <code class="text-warning small">home, features, about, contact…</code>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-center p-4 h-100">
+      <i class="bi bi-layout-sidebar-reverse text-danger" style="font-size:2.5rem;"></i>
+      <h4 class="mt-3 fw-bold">footer.ejs</h4>
+      <p style="color:#aaa; font-size:0.9rem;">Contains footer HTML, social icons, and Bootstrap JS. Included at the bottom of every page.</p>
+      <code class="text-danger small">&lt;%- include('./partials/footer') %&gt;</code>
+    </div>
+  </div>
+</div>
+
+<div class="card p-4">
+  <h5 class="fw-bold mb-3"><i class="bi bi-info-circle text-danger me-2"></i>How It Works</h5>
+  <ol style="color:#aaa; line-height:2;" class="mb-0">
+    <li>Every page starts with <code class="text-danger">&lt;%- include('./partials/header') %&gt;</code></li>
+    <li>Unique page content goes in the middle</li>
+    <li>Every page ends with <code class="text-danger">&lt;%- include('./partials/footer') %&gt;</code></li>
+    <li>No HTML is repeated — changes in header/footer apply everywhere instantly ✅</li>
+  </ol>
+</div>
+
+<%- include('./partials/footer') %>

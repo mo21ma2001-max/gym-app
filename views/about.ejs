@@ -1,0 +1,48 @@
+<%- include('./partials/header') %>
+
+<div class="text-center mb-5">
+  <h1 class="fw-bold">About Our Platform <i class="bi bi-info-circle text-danger"></i></h1>
+  <div class="section-divider"></div>
+</div>
+
+<div class="row g-4 mb-5">
+  <div class="col-md-4">
+    <div class="card p-4 h-100">
+      <i class="bi bi-lightbulb-fill text-danger fs-2 mb-2"></i>
+      <h4 class="fw-bold">The Problem</h4>
+      <p style="color:#aaa;">Many people face difficulties finding a suitable gym or workout plan that matches their needs and lifestyle.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card p-4 h-100">
+      <i class="bi bi-check-circle-fill text-danger fs-2 mb-2"></i>
+      <h4 class="fw-bold">Our Solution</h4>
+      <p style="color:#aaa;">Our platform provides all fitness-related services in a simple and efficient way, making it easier to start your fitness journey.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card p-4 h-100">
+      <i class="bi bi-bullseye text-danger fs-2 mb-2"></i>
+      <h4 class="fw-bold">Our Goal</h4>
+      <p style="color:#aaa;">Helping users find the best gyms, trainers, and workout plans — all in one place.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Team -->
+<h2 class="fw-bold text-center mb-2">Meet the Team</h2>
+<div class="section-divider mb-4"></div>
+<div class="row row-cols-2 row-cols-md-5 g-3 text-center">
+  <% const roleIcons = { 'Project Manager':'bi-kanban','Backend Developer':'bi-server','Frontend Developer':'bi-palette','Database Designer':'bi-database','UI/UX Designer':'bi-pen' }; %>
+  <% team.forEach(member => { %>
+  <div class="col">
+    <div class="card p-3 h-100">
+      <i class="bi <%= roleIcons[member.role] || 'bi-person' %> text-danger fs-3 mb-2"></i>
+      <h6 class="fw-bold mb-1"><%= member.name %></h6>
+      <small style="color:#aaa;"><%= member.role %></small>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
+<%- include('./partials/footer') %>

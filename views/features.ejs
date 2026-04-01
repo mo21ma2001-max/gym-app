@@ -1,0 +1,28 @@
+<%- include('./partials/header') %>
+
+<div class="text-center mb-5">
+  <h1 class="fw-bold">Our Premium Features <i class="bi bi-stars text-danger"></i></h1>
+  <div class="section-divider"></div>
+  <p style="color:#ccc;">Push your limits with our world-class gym facilities</p>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% const icons = ['bi-barbell','bi-bicycle','bi-droplet-half','bi-person-check','bi-flower1','bi-journal-text']; %>
+  <% services.forEach((item, i) => { %>
+  <div class="col">
+    <div class="card h-100 text-center p-4">
+      <div class="mb-3">
+        <i class="bi <%= icons[i % icons.length] %> text-danger" style="font-size:2.8rem;"></i>
+      </div>
+      <h4 class="fw-bold"><%= item.title %></h4>
+      <p style="color:#aaa; flex-grow:1;" class="mb-3"><%= item.desc %></p>
+      <div class="mb-3">
+        <span class="badge bg-success px-3 py-2 fs-6"><%= item.price %> / Month</span>
+      </div>
+      <a href="/contact" class="btn btn-outline-danger">Start Training</a>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
+<%- include('./partials/footer') %>

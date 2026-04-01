@@ -1,0 +1,26 @@
+<%- include('./partials/header') %>
+
+<div class="text-center mb-5">
+  <h1 class="fw-bold">Gym Equipment <i class="bi bi-dumbbell text-danger"></i></h1>
+  <div class="section-divider"></div>
+</div>
+
+<div class="row g-4">
+  <% for(let item of items) { %>
+  <div class="col-md-3">
+    <div class="card p-3 text-center h-100">
+      <i class="bi bi-dumbbell text-danger fs-2 mb-2"></i>
+      <h5 class="fw-bold"><%= item.name %></h5>
+      <p style="color:#aaa;" class="mb-2"><%= item.type %></p>
+      <% if(item.status === 'Available') { %>
+        <span class="badge bg-success mb-3">Available</span>
+      <% } else { %>
+        <span class="badge bg-danger mb-3">Busy</span>
+      <% } %>
+      <a href="/items/<%= item.id %>" class="btn btn-outline-danger btn-sm">View Details</a>
+    </div>
+  </div>
+  <% } %>
+</div>
+
+<%- include('./partials/footer') %>
