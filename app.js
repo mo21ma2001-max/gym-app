@@ -48,11 +48,11 @@ app.get('/about', (req, res) => {
     projectName: 'Fitness Gym Platform',
     description: 'Helping users find the best gyms easily.',
     team: [
-      { name: 'Aya',      role: 'Project Manager'    },
-      { name: 'Saja',     role: 'Backend Developer'  },
-      { name: 'Roaa',     role: 'Frontend Developer' },
-      { name: 'Mohammad', role: 'Database Designer'  },
-      { name: 'Jubrail',  role: 'UI/UX Designer'     }
+      { name: 'Aya'},
+      { name: 'Saja'},
+      { name: 'Roaa'},
+      { name: 'Mohammad'},
+      { name: 'Jubrail'}
     ]
   });
 });
