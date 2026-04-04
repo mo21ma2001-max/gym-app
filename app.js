@@ -28,16 +28,46 @@ app.get('/', (req, res) => {
 
 app.get('/features', (req, res) => {
   const gymServices = [
-    { title: 'Weightlifting',    desc: 'Access to heavy-duty racks, dumbbells up to 100kg, and professional Olympic lifting platforms.', price: '30 JOD' },
-    { title: 'Cardio Zone',      desc: 'Equipped with high-end treadmills, stationary bikes, and rowing machines with smart tracking.',  price: '25 JOD' },
-    { title: 'Swimming Pool',    desc: 'Enjoy our semi-olympic heated indoor pool with professional swimming lanes and sauna access.',    price: '40 JOD' },
-    { title: 'Personal Training',desc: 'Get a customized workout plan and 1-on-1 coaching from our certified expert trainers.',          price: '60 JOD' },
-    { title: 'Yoga & Pilates',   desc: 'Improve your flexibility and mental health in our quiet, professional yoga studio sessions.',    price: '20 JOD' },
-    { title: 'Nutrition Plans',  desc: 'Expert dietary advice and meal planning to help you reach your body goals faster.',              price: '15 JOD' },
+    { 
+      title: 'Weightlifting', 
+      desc: 'Access to heavy-duty racks, dumbbells up to 100kg, and professional Olympic lifting platforms.', 
+      price: '30 JOD',
+      icon:  'bi-award'
+    },
+    { 
+      title: 'Cardio Zone', 
+      desc: 'Equipped with high-end treadmills, stationary bikes, and rowing machines with smart tracking.', 
+      price: '25 JOD',
+      icon: 'bi-bicycle'
+    },
+    { 
+      title: 'Swimming Pool', 
+      desc: 'Enjoy our semi-olympic heated indoor pool with professional swimming lanes and sauna access.', 
+      price: '40 JOD',
+      icon: 'bi-droplet-half'
+    },
+    { 
+      title: 'Personal Training',
+      desc: 'Get a customized workout plan and 1-on-1 coaching from our certified expert trainers.', 
+      price: '60 JOD',
+      icon: 'bi-person-check'
+    },
+    { 
+      title: 'Yoga & Pilates', 
+      desc: 'Improve your flexibility and mental health in our quiet, professional yoga studio sessions.', 
+      price: '20 JOD',
+      icon: 'bi-flower1'
+    },
+    { 
+      title: 'Nutrition Plans', 
+      desc: 'Expert dietary advice and meal planning to help you reach your body goals faster.', 
+      price: '15 JOD',
+      icon: 'bi-journal-text'
+    }
   ];
+
   res.render('features', { title: 'Our Features', services: gymServices });
 });
-
 
 app.get('/about', (req, res) => {
   res.render('about', {
@@ -45,11 +75,11 @@ app.get('/about', (req, res) => {
     projectName: 'Fitness Gym Platform',
     description: 'Helping users find the best gyms easily.',
     team: [
-      { name: 'Aya',      role: 'Project Manager'    },
-      { name: 'Saja',     role: 'Backend Developer'  },
-      { name: 'Roaa',     role: 'Frontend Developer' },
-      { name: 'Mohammad', role: 'Database Designer'  },
-      { name: 'Jubrail',  role: 'UI/UX Designer'     }
+      { name: 'Jibreel' },
+      { name: 'Roaa' },
+      { name: 'Saja' },
+      { name: 'Mohammad' },
+      { name: 'ِAya' }
     ]
   });
 });
