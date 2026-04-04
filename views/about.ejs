@@ -32,16 +32,15 @@
 <h2 class="fw-bold text-center mb-2">Meet the Team</h2>
 <div class="section-divider mb-4"></div>
 <div class="row row-cols-2 row-cols-md-5 g-3 text-center">
-  <% const roleIcons = { 'Project Manager':'bi-kanban','Backend Developer':'bi-server','Frontend Developer':'bi-palette','Database Designer':'bi-database','UI/UX Designer':'bi-pen' }; %>
   <% team.forEach(member => { %>
   <div class="col">
     <div class="card p-3 h-100">
-      <i class="bi <%= roleIcons[member.role] || 'bi-person' %> text-danger fs-3 mb-2"></i>
+      <i class="bi bi-code-slash text-danger fs-3 mb-2"></i>
       <h6 class="fw-bold mb-1"><%= member.name %></h6>
-      <small style="color:#aaa;"><%= member.role %></small>
-    </div>
+      </div>
   </div>
   <% }) %>
+</div>
 </div>
 
 <%- include('./partials/footer') %>
