@@ -7,7 +7,7 @@ A team project built with Node.js, Express, and EJS.
 - **Saja** 
 - **Roaa** 
 - **Mohammad**
-- **Jubrail** 
+- **Jibreel** 
 
 ## Pages
 | Route | Description |
