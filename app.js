@@ -2,20 +2,17 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Middleware
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-// View Engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Routes
 const itemsRoute = require('./routes/items');
 app.use('/items', itemsRoute);
 
-// Home Page
 app.get('/', (req, res) => {
   res.render('home', {
     title: 'Gym App',
@@ -28,7 +25,7 @@ app.get('/', (req, res) => {
   });
 });
 
-// Features Page
+
 app.get('/features', (req, res) => {
   const gymServices = [
     { title: 'Weightlifting',    desc: 'Access to heavy-duty racks, dumbbells up to 100kg, and professional Olympic lifting platforms.', price: '30 JOD' },
@@ -41,7 +38,7 @@ app.get('/features', (req, res) => {
   res.render('features', { title: 'Our Features', services: gymServices });
 });
 
-// About Page
+
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About Us',
@@ -57,7 +54,6 @@ app.get('/about', (req, res) => {
   });
 });
 
-// Contact Page
 app.get('/contact', (req, res) => {
   res.render('contact', {
     title: 'Contact Us',
@@ -67,12 +63,10 @@ app.get('/contact', (req, res) => {
   });
 });
 
-// Layout Demo Page
 app.get('/layout-demo', (req, res) => {
   res.render('layout-demo', { title: 'Base Layout Demo' });
 });
 
-// 404 Page — must be last
 app.use((req, res) => {
   res.status(404).render('404', { title: 'Page Not Found' });
 });
